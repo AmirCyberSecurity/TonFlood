@@ -6,24 +6,29 @@ Async HTTP flood simulator and stress testing tool built with Django, aiohttp, a
 
 For educational purposes and authorized testing only. Author not responsible for misuse.
 
+## Installation & Run
+
+1. Download the project and open the folder in terminal.
+2. Install dependencies (Django latest 5.0.x version):
+
 ```bash
-git clone https://github.com/yourusername/TonFlood.git
-cd TonFlood
 pip install -r requirements.txt
 ```
+
+3. Start the server:
 
 ```bash
 python manage.py runserver
 ```
 
-Then open `http://127.0.0.1:8000/start` in your browser.
+4. Open `http://127.0.0.1:8000/start` in your browser.
 
 ## requirements.txt
-```bash
-Django==5.0
-aiohttp==3.9.0
-requests==2.31.0
-asgiref==3.7.2
+
+```text
+django~=5.0.0
+aiohttp
+requests
 ```
 
 **TonFlood** - Educational project
