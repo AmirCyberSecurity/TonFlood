@@ -1,0 +1,159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TonFlood - Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'vulnerabilities/css/style.css' %}">
+</head>
+<body>
+ 
+<canvas id="bg"></canvas>
+ 
+<div class="scroll-container">
+ 
+    <section class="section hero">
+        <div class="hero-inner">
+            <h1>TonFlood</h1>
+            <div class="UltraDDoS">Ultra DDoS</div>
+            <a href="{% url 'start' %}"><button class="start">Start</button></a>
+        </div>
+    </section>
+
+    <section class="section stats-section">
+        <div class="stats-grid">
+            <div class="stat-block">
+                <span class="stat-num">10000</span>
+                <span class="stat-label">REQUESTS PER MINUTE</span>
+            </div>
+            <div class="divider-v"></div>
+            <div class="stat-block">
+                <span class="stat-num">5000+</span>
+                <span class="stat-label">RANDOM IP</span>
+            </div>
+            <div class="divider-v"></div>
+            <div class="stat-block">
+                <span class="stat-num">&lt; 100MS</span>
+                <span class="stat-label">LATENCY</span>
+            </div>
+            <div class="divider-v"></div>
+            <div class="stat-block">
+                <span class="stat-num">DDoS</span>
+                <span class="stat-label">SIMULATION FOR 1 DEVICE</span>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="section info-section">
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="card-num">01</div>
+                <div class="card-title">ASYNC ENGINE</div>
+                <div class="card-divider"></div>
+                <p class="card-text">
+                    Built on a non-blocking architecture, the system processes 
+                    thousands of concurrent requests without waiting for 
+                    individual operations to complete. This allows continuous 
+                    execution flow, reduced latency spikes, and efficient handling 
+                    of high-load scenarios.
+                </p>
+            </div>
+            <div class="info-card">
+                <div class="card-num">02</div>
+                <div class="card-title">TRAFFIC SIMULATION</div>
+                <div class="card-divider"></div>
+                <p class="card-text">
+                    Simulates high-intensity traffic patterns from a single device, 
+                    recreating conditions similar to distributed environments. The 
+                    system generates sustained request flows to test how services 
+                    behave under pressure.
+                </p>
+            </div>
+            <div class="info-card">
+                <div class="card-num">03</div>
+                <div class="card-title">SINGLE NODE</div>
+                <div class="card-divider"></div>
+                <p class="card-text">
+                    Operates entirely from one machine while emulating large
+                    traffic generation. Through concurrency and efficient 
+                    execution, the system achieves significant load without 
+                    requiring distributed infrastructure.
+                </p>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="section data-section">
+        <div class="data-header">TECHNICAL DATA</div>
+        <div class="data-table">
+            <div class="data-row">
+                <span class="data-key">Execution Model</span>
+                <span class="data-dots"></span>
+                <span class="data-val">Asynchronous (non-blocking)</span>
+            </div>
+        <div class="data-row">
+            <span class="data-key">Requests per Minute</span>
+            <span class="data-dots"></span>
+            <span class="data-val">10,000+</span>
+        </div>
+        <div class="data-row">
+            <span class="data-key">Concurrent Tasks</span>
+            <span class="data-dots"></span>
+            <span class="data-val">10K+</span>
+        </div>
+        <div class="data-row">
+            <span class="data-key">Success Rate</span>
+            <span class="data-dots"></span>
+            <span class="data-val">92–97%</span>
+        </div>
+        <div class="data-row">
+            <span class="data-key">Average Latency</span>
+            <span class="data-dots"></span>
+            <span class="data-val">10–200 ms</span>
+        </div>
+        <div class="data-row">
+            <span class="data-key">Deployment Type</span>
+            <span class="data-dots"></span>
+            <span class="data-val">Single Node</span>
+        </div>
+        <div class="data-row">
+            <span class="data-key">Traffic Simulation</span>
+            <span class="data-dots"></span>
+            <span class="data-val">Distributed Behavior</span>
+        </div>
+        <div class="data-row">
+            <span class="data-key">Load Control</span>
+            <span class="data-dots"></span>
+            <span class="data-val">Dynamic Scaling</span>
+        </div>
+        <div class="data-row">
+            <span class="data-key">Network Conditions</span>
+            <span class="data-dots"></span>
+            <span class="data-val">Variable / Realistic</span>
+        </div>
+        <div class="data-row">
+            <span class="data-key">Performance Mode</span>
+            <span class="data-dots"></span>
+            <span class="data-val">Continuous</span>
+        </div>
+        </div>
+    </section>
+ 
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-coord">ASYNC ENGINE</span>
+            <span class="footer-title">TONFLOOD</span>
+            <span class="footer-coord">SINGLE NODE</span>
+        </div>
+        <div class="footer-sub">ASYNC TRAFFIC SIMULATION WITH REALISTIC LOAD AND HIGH-PERFORMANCE EXECUTION</div>
+    </footer>
+
+</div>
+ 
+<script src="{% static 'vulnerabilities/js/menu.js' %}" defer></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TonFlood - 404</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'vulnerabilities/css/style.css' %}">
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="scroll-container">
+ 
+    <section class="section hero">
+        <div class="hero-inner">
+            <h1>TonFlood</h1>
+            <div class="NotFound">404 - Not Found</div>
+            <a href="{% url 'menu' %}"><button class="BackToMenu">Back To Menu</button></a>
+        </div>
+    </section>
+    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-coord">ASYNC ENGINE</span>
+            <span class="footer-title">TONFLOOD</span>
+            <span class="footer-coord">SINGLE NODE</span>
+        </div>
+        <div class="footer-sub">ASYNC TRAFFIC SIMULATION WITH REALISTIC LOAD AND HIGH-PERFORMANCE EXECUTION</div>
+    </footer>
+
+</div>
+
+<script src="{% static 'vulnerabilities/js/404.js' %}" defer></script>
+
+</body>
+</html>
