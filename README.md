@@ -21,7 +21,7 @@ pip install -r requirements.txt
 python manage.py runserver
 ```
 
-4. Open `http://127.0.0.1:8000/start` in your browser.
+4. Open `http://127.0.0.1:8000` in your browser.
 
 ## requirements.txt
 
