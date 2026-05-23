@@ -433,7 +433,7 @@ button:active {
     width: 100%;
     max-width: 900px;
 
-    margin: -250px auto 60px;
+    margin: -400px auto -150px !important;
 
     display: flex;
     flex-direction: column;
