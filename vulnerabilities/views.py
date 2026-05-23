@@ -7,19 +7,64 @@ import requests
 import time
 from django.shortcuts import render
 from django.http import JsonResponse
+from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.cache import cache
 
+BAD_UA = [
+    "python",
+    "curl",
+    "wget",
+    "aiohttp",
+    "requests",
+    "httpx",
+    "scrapy",
+    "bot",
+    "spider",
+    "crawler",
+]
+
+
+def is_bot(request):
+    ua = request.headers.get("User-Agent", "").lower()
+
+    if not ua:
+        return True
+
+    for bad in BAD_UA:
+        if bad in ua:
+            return True
+
+    if "Accept-Language" not in request.headers:
+        return True
+
+    if "Accept" not in request.headers:
+        return True
+
+    return False
+
+
 def menu(request):
     ip = get_client_ip(request)
+
+    if is_bot(request):
+        return HttpResponse(status=403)
+
     if is_rate_limited(ip, 'menu'):
-        return JsonResponse({"error": "Too many requests"}, status=429)
+        return HttpResponse(status=429)
+
     return render(request, 'vulnerabilities/menu.html')
+
 
 def start(request):
     ip = get_client_ip(request)
+
+    if is_bot(request):
+        return HttpResponse(status=403)
+
     if is_rate_limited(ip, 'start'):
-        return JsonResponse({"error": "Too many requests"}, status=429)
+        return HttpResponse(status=429)
+
     return render(request, 'vulnerabilities/start.html')
 
 def custom_404(request, exception=None, *args, **kwargs):
@@ -145,8 +190,6 @@ def run_task(request):
 
     elif action == "start":
         global _ddos_running, _ddos_total, _ddos_last_fake_ip, _ddos_last_status, _ddos_thread, _ddos_last_time, _ddos_last_count
-        if _ddos_running:
-            return JsonResponse({"response": "ERROR | Attack already running"})
         target = body.get("target")
         workers = body.get("workers", 500)
         if not target:
