@@ -30,5 +30,8 @@ django~=5.0.0
 aiohttp
 requests
 ```
+<p align="center">
+  <img src="./image.png" width="100%">
+</p>
 
 **TonFlood** - Educational project
