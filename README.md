@@ -30,6 +30,8 @@ django~=5.0.0
 aiohttp
 requests
 ```
+## Preview
+
 <p align="center">
   <img src="./image.png" width="100%">
 </p>
