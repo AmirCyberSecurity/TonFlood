@@ -23,6 +23,22 @@ python manage.py runserver
 
 4. Open `http://127.0.0.1:8000` in your browser.
 
+## Alternative Quick Launch
+
+You can also start the project using the launcher script:
+
+```bash
+python launch.py
+```
+
+The launcher will:
+
+* Install all dependencies from `requirements.txt`
+* Start the Django development server
+* Automatically open the web interface in your default browser
+
+This is the recommended option for users who want a one-click startup experience.
+
 ## requirements.txt
 
 ```text
