@@ -72,6 +72,15 @@ body::-webkit-scrollbar-thumb:hover {
     justify-content: center;
 }
 
+.github_link,
+.github_link:visited,
+.github_link:hover,
+.github_link:active,
+.github_link:focus {
+    color: rgba(255,255,255,0.15);;
+    text-decoration: underline;
+}
+
 .hero {
     flex-direction: column;
     text-align: center;
@@ -519,3 +528,4 @@ button:active {
 .terminal {
     overflow-y: hidden;
 }
+
