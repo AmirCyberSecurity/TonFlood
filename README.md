@@ -4,6 +4,10 @@ Async HTTP flood simulator and stress testing tool built with Django, aiohttp, a
 
 For educational purposes and authorized testing only. Author not responsible for misuse.
 
+<p align="center">
+  <img src="./image.png" width="100%">
+</p>
+
 ## Installation & Run
 
 1. Download the project and open the folder in terminal.
